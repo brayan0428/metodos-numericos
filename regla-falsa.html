@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Metodo - Regla Falsa</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container text-center mt-5">
+    <h1>Metodo Regla Falsa</h1>
+    <p><b>Ejemplos para validar la aplicación</b></p>
+    <p><b>Ecuación</b>: x^2-2 - <b>Valor A</b>: 0 - <b>Valor B</b>: 2</p>
+    <p><b>Ecuación</b>: 2x^3+x-1 - <b>Valor A</b>: 0 - <b>Valor B</b>: 1</p>
+    <p><b>Ecuación</b>: 2x^2+x+3 - <b>Valor A</b>: 2 - <b>Valor B</b>: 3</p>
+    <div class="form-inline mt-5">
+      <input type="text" class="form-control mb-2 col-md-5 mr-2" id="txtEcuacion" placeholder="Ingrese la Ecuación"
+        value="x^2-2">
+      <input type="number" class="form-control mb-2 col-md-3 mr-2" id="txtRangoInicial" placeholder="Valor Inicial A"
+        value="0">
+      <input type="number" class="form-control mb-2 col-md-3 mr-2" id="txtRangoFinal" placeholder="Valor Final B"
+        value="2">
+      <div class="text-center col-md-12 mt-1">
+        <button type="submit" class="btn btn-primary mb-2 col-md-3" id="calcularRF">Calcular</button>
+        <a href="/" class="btn btn-danger mb-2 col-md-3 ml-1">Atras</a>
+      </div>
+
+    </div>
+    <br>
+    <table class="table mb-5">
+      <thead class="thead-dark">
+        <tr>
+          <th>Iteracion</th>
+          <th>A</th>
+          <th>B</th>
+          <th>f(A)</th>
+          <th>f(B)</th>
+          <th>xi</th>
+          <th>f(xi)</th>
+        </tr>
+      </thead>
+      <tbody id="bodyRF">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="js/nerdamer.core.js"></script>
+  <script src="js/Algebra.js"></script>
+  <script src="js/Calculus.js"></script>
+  <script src="js/Solve.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

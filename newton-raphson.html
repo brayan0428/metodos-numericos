@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Metodo - Newton Raphson</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container text-center mt-5">
+    <h1>Metodo Newton Raphson</h1>
+    <p><b>Ejemplos para validar la aplicación</b></p>
+    <p><b>Ecuación</b>: x^5+x-1 - <b>Valor Inicial</b>: 1</p>
+    <p><b>Ecuación</b>: x^3-2x-5 - <b>Valor Inicial</b>: 2</p>
+    <p><b>Ecuación</b>: x^3+4x^2-10 - <b>Valor Inicial</b>: 0.75</p>
+    <p><b>Ecuación</b>: x^2+2x-10 - <b>Valor Inicial</b>: 3</p>
+    <div class="form-inline mt-5">
+      <input type="text" class="form-control mb-2 col-md-4 mr-2" id="txtEcuacion" placeholder="Ingrese la Ecuación"
+        value="x^5+x-1">
+      <input type="number" class="form-control mb-2 col-md-3 mr-2" id="txtValorInicial" placeholder="Valor Inicial"
+        value="1">
+      <button type="submit" class="btn btn-primary mb-2 col-md-2" id="calcularNR">Calcular</button>
+      <a href="/" class="btn btn-danger mb-2 col-md-2 ml-1">Atras</a>
+    </div>
+    <div class="form-inline">
+      <input type="text" class="form-control mb-2 col-md-4 mr-2" id="txtDerivada" placeholder="Derivada" disabled>
+    </div>
+    <br>
+    <div class="alert alert-primary mt-5" role="alert" id="lbResultado">
+
+    </div>
+    <table class="table mb-5">
+      <thead class="thead-dark">
+        <tr>
+          <th>Iteracion</th>
+          <th>xi</th>
+          <th>f(xi)</th>
+          <th>f'(xi)</th>
+          <th>f(xi) / f'(xi)</th>
+        </tr>
+      </thead>
+      <tbody id="bodyNR">
+
+      </tbody>
+    </table>
+  </div>
+  <script src="js/nerdamer.core.js"></script>
+  <script src="js/Algebra.js"></script>
+  <script src="js/Calculus.js"></script>
+  <script src="js/Solve.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
