@@ -20,25 +20,34 @@ if (btnNR != undefined) {
       let html = "";
       i = 0;
       document.getElementById("bodyNR").innerHTML = "";
-      while (xi != xiAnt) {
+      while (xi != xiAnt && i <= 50) {
         xiAnt = xi;
         let fxi = nerdamer(ecuacion, { x: xi });
         let fxi_derivada = nerdamer(derivada, { x: xi });
+        console.log(fxi.toString())
+        console.log(fxi_derivada.toString())
+        fxi = nerdamer(fxi.toString())
+        console.log(fxi.toString())
         let division = fxi / fxi_derivada;
         xi = xiAnt - division;
         console.log(xi);
         html =
           html +
           `
-      <tr>
-        <td>${i}</td>
-        <td>${parseFloat(xiAnt).toFixed(6)}</td>
-        <td>${eval(fxi.toString()).toFixed(4)}</td>
-        <td>${eval(fxi_derivada.toString()).toFixed(4)}</td>
-        <td>${parseFloat(division).toFixed(4)}</td>
-      </tr>
-    `;
+          <tr>
+            <td>${i}</td>
+            <td>${parseFloat(xiAnt).toFixed(6)}</td>
+            <td>${eval(fxi.toString()).toFixed(4)}</td>
+            <td>${eval(fxi_derivada.toString()).toFixed(4)}</td>
+            <td>${parseFloat(division).toFixed(4)}</td>
+          </tr>
+        `;
         i += 1;
+        console.log(i)
+      }
+      if(i>= 50){
+        alert('Error al procesar esta ecuación.')
+        return
       }
       document.getElementById("bodyNR").innerHTML = html;
       let resultado = parseFloat(xiAnt).toFixed(6);
